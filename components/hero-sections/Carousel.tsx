@@ -16,34 +16,34 @@ import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react"
 
 const slides = [
   {
-    img: "https://picsum.photos/seed/mountains/1400/700",
-    eyebrow: "Himalayan Escapes",
-    title: "Where the peaks\ntouch the clouds",
-    sub: "Curated treks and stays across the Himalayas",
+    img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
+    eyebrow: "Morning Yoga",
+    title: "Begin your day\nwith inner peace",
+    sub: "Sunrise yoga sessions to energize your mind and body",
   },
   {
-    img: "https://picsum.photos/seed/beach/1400/700",
-    eyebrow: "Coastal Retreats",
-    title: "Sun, sea, and\nunforgettable shores",
-    sub: "Handpicked beach destinations across India",
+    img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
+    eyebrow: "Meditation Retreats",
+    title: "Find calm in\nevery breath",
+    sub: "Guided meditation retreats for deep relaxation and clarity",
   },
   {
-    img: "https://picsum.photos/seed/forest/1400/700",
-    eyebrow: "Wildlife & Forests",
-    title: "Lose yourself in\nthe wilderness",
-    sub: "Safari stays and forest lodges off the beaten path",
+    img: "https://images.unsplash.com/photo-1518611012118-696072aa579a",
+    eyebrow: "Yoga by Nature",
+    title: "Flow with the\nrhythm of nature",
+    sub: "Practice yoga in serene forests, beaches, and mountains",
   },
   {
-    img: "https://picsum.photos/seed/heritage/1400/700",
-    eyebrow: "Heritage Journeys",
-    title: "Stories carved\nin stone and time",
-    sub: "Immersive cultural trips through ancient India",
+    img: "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7",
+    eyebrow: "Wellness & Healing",
+    title: "Restore balance\nin your life",
+    sub: "Holistic wellness programs combining yoga and Ayurveda",
   },
   {
-    img: "https://picsum.photos/seed/valley/1400/700",
-    eyebrow: "Valley Hideaways",
-    title: "Silence so deep\nyou can hear yourself",
-    sub: "Remote valleys and offbeat escapes for the soul",
+    img: "https://images.unsplash.com/photo-1552196563-55cd4e45efb3",
+    eyebrow: "Spiritual Journey",
+    title: "Reconnect with\nyour inner self",
+    sub: "Transformative yoga journeys for mind, body, and soul",
   },
 ]
 
@@ -78,42 +78,51 @@ export function CarouselPlugin() {
                   src={slide.img}
                   alt={slide.eyebrow}
                   fill
-                  className="object-cover transition-transform duration-[6000ms] scale-105 hover:scale-100"
+                  className="object-cover transition-transform duration-[5000ms] scale-105 hover:scale-100"
                   priority={idx === 0}
                 />
 
                 {/* Layered gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
                 {/* Slide content */}
-                <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 lg:px-24">
-                  <p
-                    className="text-amber-400 text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 animate-in fade-in slide-in-from-bottom-3 duration-700"
-                    style={{ animationFillMode: "both" }}
-                  >
-                    ✦ {slide.eyebrow}
-                  </p>
-                  <h2
-                    className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] max-w-xl mb-4 whitespace-pre-line animate-in fade-in slide-in-from-bottom-4 duration-700"
-                    style={{ animationDelay: "100ms", animationFillMode: "both" }}
-                  >
-                    {slide.title}
-                  </h2>
-                  <p
-                    className="text-stone-300 text-sm md:text-base max-w-sm mb-7 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700"
-                    style={{ animationDelay: "200ms", animationFillMode: "both" }}
-                  >
-                    {slide.sub}
-                  </p>
-                  <div
-                    className="animate-in fade-in slide-in-from-bottom-4 duration-700"
-                    style={{ animationDelay: "300ms", animationFillMode: "both" }}
-                  >
-                    <Button className="bg-amber-500 hover:bg-amber-400 text-white font-semibold px-6 py-5 rounded-xl shadow-lg shadow-amber-900/30 hover:-translate-y-0.5 transition-all duration-200 text-sm">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
+
+                    <p className="special-text mb-3">
+                      ✦ {slide.eyebrow}
+                    </p>
+
+                    <h2 className="text-white leading-[1.1] max-w-xl mb-4">
+                      {(() => {
+                        const parts = slide.title.split("\n")
+
+                        return (
+                          <>
+                            <span className="block text-lg md:text-2xl lg:text-3xl font-normal opacity-80">
+                              {parts[0]}
+                            </span>
+
+                            {parts[1] && (
+                              <span className="block text-3xl md:text-5xl lg:text-5xl font-bold">
+                                {parts[1]}
+                              </span>
+                            )}
+                          </>
+                        )
+                      })()}
+                    </h2>
+
+                    <p className="text-white/80 text-sm md:text-lg max-w-md mb-7 leading-relaxed">
+                      {slide.sub}
+                    </p>
+
+                    <Button className="bg-accent text-white font-semibold px-6 py-5 rounded-full shadow-lg hover:-translate-y-0.5 transition-all duration-200 text-sm">
                       Explore Trips
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
+
                   </div>
                 </div>
               </div>
@@ -136,11 +145,10 @@ export function CarouselPlugin() {
           <button
             key={i}
             onClick={() => api?.scrollTo(i)}
-            className={`transition-all duration-300 rounded-full ${
-              i === current
-                ? "w-6 h-2 bg-amber-400"
-                : "w-2 h-2 bg-white/40 hover:bg-white/70"
-            }`}
+            className={`transition-all duration-300 rounded-full ${i === current
+              ? "w-6 h-2 bg-amber-400"
+              : "w-2 h-2 bg-white/40 hover:bg-white/70"
+              }`}
           />
         ))}
       </div>

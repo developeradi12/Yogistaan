@@ -58,7 +58,7 @@ export default async function TripDetails({
             ✦ Featured Destination
           </p>
           <h1
-            className="font-serif text-3xl md:text-5xl font-bold text-white leading-tight max-w-2xl mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700"
+            className=" text-3xl md:text-5xl font-bold text-white leading-tight max-w-2xl mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700"
             style={{ animationDelay: "200ms", animationFillMode: "both" }}
           >
             {trip.title}
@@ -91,7 +91,7 @@ export default async function TripDetails({
             style={{ animationDelay: "350ms", animationFillMode: "both" }}
           >
             <CardContent className="p-6">
-              <h2 className="font-serif text-xl font-semibold text-stone-800 mb-4">
+              <h2 className=" text-xl font-semibold text-stone-800 mb-4">
                 Places Covered
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -114,7 +114,7 @@ export default async function TripDetails({
             style={{ animationDelay: "450ms", animationFillMode: "both" }}
           >
             <CardContent className="p-6">
-              <h2 className="font-serif text-xl font-semibold text-stone-800 mb-6">
+              <h2 className=" text-xl font-semibold text-stone-800 mb-6">
                 Day-wise Itinerary
               </h2>
 
@@ -132,7 +132,7 @@ export default async function TripDetails({
                       <span className="text-[10px] font-bold uppercase tracking-widest text-amber-600 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-md">
                         Day {day.day}
                       </span>
-                      <span className="font-serif font-semibold text-stone-800 text-sm">
+                      <span className=" font-semibold text-stone-800 text-sm">
                         {day.title}
                       </span>
                     </div>
@@ -151,11 +151,11 @@ export default async function TripDetails({
             style={{ animationDelay: "550ms", animationFillMode: "both" }}
           >
             <CardContent className="p-6">
-              <h2 className="font-serif text-xl font-semibold text-stone-800 mb-4">
+              <h2 className=" text-xl font-semibold text-stone-800 mb-4">
                 About This Trip
               </h2>
               {/* Pull quote — first sentence */}
-              <p className="border-l-2 border-amber-400 pl-4 font-serif italic text-stone-700 text-base leading-relaxed mb-4">
+              <p className="border-l-2 border-amber-400 pl-4  italic text-stone-700 text-base leading-relaxed mb-4">
                 {trip.description?.split(".")[0]}.
               </p>
               <p className="text-sm leading-[1.85] text-stone-500">
@@ -178,7 +178,7 @@ export default async function TripDetails({
                 <p className="text-[10px] font-semibold uppercase tracking-widest text-stone-400 mb-1">
                   Starting from
                 </p>
-                <div className="font-serif text-4xl font-bold text-stone-900 leading-none">
+                <div className=" text-4xl font-bold text-stone-900 leading-none">
                   ₹{trip.price?.toLocaleString("en-IN")}
                 </div>
                 <p className="text-xs text-stone-400 mt-1">
