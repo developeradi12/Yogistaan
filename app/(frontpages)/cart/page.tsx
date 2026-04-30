@@ -14,8 +14,6 @@ export default function CartPage() {
 
   return (
     <div className=" bg-[#FAF7F2] text-[#1A1A18] overflow-x-hidden min-h-screen flex flex-col">
-      <AnnouncementBar />
-      <Header />
 
       {/* Page Header */}
       <div className="bg-[#F2EDE3] border-b border-[#C8A96A]/15 py-8 sm:py-10 px-4 sm:px-6">
@@ -156,8 +154,6 @@ export default function CartPage() {
           </div>
         )}
       </div>
-
-      <Footer />
     </div>
   );
 }

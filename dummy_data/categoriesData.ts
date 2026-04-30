@@ -312,28 +312,28 @@ export const CATEGORIES = [
         slug: "yoga",
         description:
             "Structured programs designed for beginners to advanced learners who want to master yoga practices and become certified instructors.",
-        img: "image1.jpg",
+        img: "/image1.jpg",
     },
     {
         title: "Retreats & Relaxation",
         slug: "retreat",
         description:
             "Peaceful getaway experiences focused on yoga, meditation, and inner healing in serene natural environments.",
-        img: "image3.jpg",
+        img: "/image3.jpg",
     },
     {
         title: "Spiritual Adventures",
         slug: "spiritual",
         description:
             "A blend of thrill and spirituality combining outdoor exploration with mindfulness and self-discovery.",
-        img: "image4.jpg",
+        img: "/image4.jpg",
     },
     {
         title: "Divine Festivals",
         slug: "divine",
         description:
             "Celebration-based gatherings with music, yoga, and spiritual energy that bring people together in joy.",
-        img: "image1.jpg",
+        img: "/image1.jpg",
     },
     {
         title: "Dharma & Pilgrimage",

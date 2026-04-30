@@ -11,6 +11,7 @@ import StoreCard from "../category/StoreCard";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import SectionLabel from "./SectionLabel";
 
 export default function StoreCarousel({ items }:{items:any}) {
   if (!items?.length) return null;
@@ -25,9 +26,9 @@ export default function StoreCarousel({ items }:{items:any}) {
 
       {/* Heading */}
       <div className="flex items-center justify-between mb-5 sm:mb-6">
-        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1C3A2F]">
+         <SectionLabel center="center">
           Yoga Store
-        </h2>
+        </SectionLabel>
       </div>
 
       {/* Carousel */}

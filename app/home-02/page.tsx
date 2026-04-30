@@ -6,18 +6,18 @@ import Testimonials from "@/components/frontpages/Testimonials";
 import testimonialsData from "@/dummy_data/testimonialsData";
 import StoreCarousel from "@/components/frontpages/StoreCarousel";
 import { storeData } from "@/dummy_data/store";
-import { CatSection } from "@/components/frontpages/CatSection";
 import { VideoSection } from "@/components/frontpages/VideoSection";
+import { CatSection02 } from "@/components/CatSection02";
 
 
 
-export default function Home() {
+export default function Home2() {
 
   return (
     <div className="bg-[#FAF7F2] text-[#1A1A18] overflow-x-clip">
       <HeroCarousel />
       <div className="py-4">
-        <CatSection />
+        <CatSection02/>
       </div>
       <div className="pt-6">
         <VideoSection />

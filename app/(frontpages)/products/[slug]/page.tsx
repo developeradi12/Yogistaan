@@ -3,9 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import AnnouncementBar from "@/components/frontpages/AnnouncementBar";
-import Header from "@/components/frontpages/Header";
-import Footer from "@/components/frontpages/Footer";
 import { storeData } from "@/dummy_data/store";
 import { useCart } from "@/context/CartContext";
 import Image from "next/image";
@@ -36,8 +33,7 @@ export default function ProductDetailPage() {
   if (!product) {
     return (
       <div className="font-['DM_Sans',sans-serif] bg-[#FAF7F2] min-h-screen flex flex-col">
-        <AnnouncementBar />
-        <Header />
+       
         <div className="flex-1 flex flex-col items-center justify-center py-24 text-center px-6">
           <p className="text-6xl mb-4">🌿</p>
           <h2 className="text-2xl font-bold text-[#1C3A2F] mb-2">Product not found</h2>
@@ -45,7 +41,7 @@ export default function ProductDetailPage() {
             Back to Shop
           </Link>
         </div>
-        <Footer />
+       
       </div>
     );
   }
@@ -70,9 +66,7 @@ export default function ProductDetailPage() {
 
   return (
     <div className="font-['DM_Sans',sans-serif] bg-[#FAF7F2] text-[#1A1A18] overflow-x-hidden">
-      <AnnouncementBar />
-      <Header />
-
+      
       {/* Breadcrumb */}
       <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center gap-2 text-[13px] text-[#7A7A72] flex-wrap">
         <Link href="/" className="hover:text-[#C4622A] transition-colors">Home</Link>
@@ -240,8 +234,6 @@ export default function ProductDetailPage() {
           </div>
         </section>
       )}
-
-      <Footer />
     </div>
   );
 }
